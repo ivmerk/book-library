@@ -1,11 +1,17 @@
 using BookLibrary.Abstractions;
 using BookLibrary.Domain;
 
-namespace BookLibrary.Service;
+namespace BookLibrary.Services;
 
-/// <summary>
-/// In-memory repository of books with persistence delegated to an <see cref="IBookStorage"/>.
-/// </summary>
+/// <inheritdoc cref="IBookRepository"/>
+/// <remarks>
+/// In-memory implementation backed by a <see cref="List{T}"/>. Persistence is delegated
+/// to the <see cref="IBookStorage"/> provided via constructor injection.
+/// <para>
+/// This implementation is NOT thread-safe. Concurrent calls from multiple threads
+/// must be synchronized externally.
+/// </para>
+/// </remarks>
 public sealed class BookRepository : IBookRepository
 {
   private static readonly StringComparer SortComparer = StringComparer.InvariantCultureIgnoreCase;
