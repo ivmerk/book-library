@@ -9,7 +9,7 @@
     <IsTestProject>true</IsTestProject>
     <CollectCoverage>true</CollectCoverage>
     <CoverletOutputFormat>opencover</CoverletOutputFormat>
-    <CoverletOutput>./TestResults/coverage</CoverletOutput>
+    <CoverletOutput>$(MSBuildProjectDirectory)/TestResults/coverage</CoverletOutput>
     <Exclude>[xunit*]*,[FluentAssertions]*,[NSubstitute*]*</Exclude>
     <Threshold>80</Threshold>
     <ThresholdType>line</ThresholdType>

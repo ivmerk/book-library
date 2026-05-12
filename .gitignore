@@ -1,6 +1,8 @@
+.vs/
 src/BookLibrary/bin
 tests/BookLibrary.Tests/obj
 tests/BookLibrary.Tests/bin
 src/BookLibrary/obj
-tests/BookLibrary.Tests/coverage.opencover.xml
-tests/BookLibrary.Tests/TestResults
+**/TestResults/
+**/coverage.*.xml
+coverage-report/
